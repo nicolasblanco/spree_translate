@@ -1,5 +1,5 @@
 <div id="attr_fields">
-  <% SpreeI18n::Config.available_locales.each do |locale| %>
+  <% I18n.available_locales.each do |locale| %>
     <% @resource.class.translated_attribute_names.each_with_index do |attr, i| %>
       <div class="panel panel-default <%= attr %> <%= locale %>" style="display:<%= i == 0 ? 'auto' : 'none' %>;">
         <div class="panel-heading">
