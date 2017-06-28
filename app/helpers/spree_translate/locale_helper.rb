@@ -1,23 +1,15 @@
 module SpreeTranslate
   module LocaleHelper
-    def select_supported_locales
-      select_tag(
-        'supported_locales[]',
-        options_for_select(available_locales_options, Config.supported_locales),
-        common_options
-      )
-    end
-
     def select_available_locales_fields
       select_tag(
         'locale',
-        options_for_select(available_locales_options, I18n.available_locales),
+        options_for_select(I18n.available_locales, I18n.available_locales),
         common_options
       )
     end
 
-    def supported_locales_options
-      Config.supported_locales.map { |locale| locale_presentation(locale) }
+    def common_options
+      { class: 'fullwidth', multiple: 'true' }
     end
   end
 end
