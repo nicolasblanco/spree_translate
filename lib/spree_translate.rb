@@ -1,5 +1,4 @@
 require 'sass/rails'
-require 'spree_i18n'
 require 'spree_translate/engine'
 require 'spree_translate/version'
 require 'coffee_script'

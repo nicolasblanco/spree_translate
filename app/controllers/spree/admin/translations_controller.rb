@@ -2,7 +2,6 @@ module Spree
   class Admin::TranslationsController < Admin::BaseController
     before_action :load_parent
 
-    helper 'spree_i18n/locale'
     helper 'spree_translate/locale'
 
     helper_method :collection_url
